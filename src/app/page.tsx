@@ -83,11 +83,7 @@ export default function Home() {
         </div>
 
         {/* map-loop render Comment component here */}
-        {Comments.map(() => (
-          <div key={comment.id}>
-            <Comment {...comment} />
-          </div>
-        ))}
+
       </div>
     </div>
   );
