@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { comments } from "@/libs/comments";
+
 
 export default function Home() {
   return (
@@ -16,20 +18,20 @@ export default function Home() {
         <div className="vstack gap-3">
           <div className="d-flex align-items-center gap-3">
             <img
-              src="/profileImages/handsome.jpg"
+              src="/profileImages/nutcha.jpg"
               width="48"
               height="48"
               className="rounded-circle"
               style={{ objectFit: "cover" }}
             />
-            <span className="fw-semibold fs-5">Chayanin Suatap 650610560</span>
+            <span className="fw-semibold fs-5">Nutcha Khampoung 660610751</span>
           </div>
 
           <span>Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #261207</span>
 
           <div className="d-flex align-items-center gap-1">
-            <img src="/like.svg" width={20}></img>
-            <span className="text-muted">100 คน</span>
+            <img src="/profileImages/like.svg" width={20}></img>
+            <span className="text-muted" >100 คน</span>
           </div>
           <hr className="m-0 border" />
         </div>
@@ -51,7 +53,7 @@ export default function Home() {
             <br />
             <span>จริงค่า</span>
             <div className="d-flex align-items-center gap-1">
-              <img src="/like.svg" width={20}></img>
+              <img src="/profileImages/like.svg" width={20}></img>
               <span className="text-muted">999 คน</span>
             </div>
           </div>
@@ -74,13 +76,18 @@ export default function Home() {
             <br />
             <span>จริงค้าบบบบบบบบ</span>
             <div className="d-flex align-items-center gap-1">
-              <img src="/like.svg" width={20}></img>
+              <img src="/profileImages/like.svg" width={20}></img>
               <span className="text-muted">2 คน</span>
             </div>
           </div>
         </div>
 
         {/* map-loop render Comment component here */}
+        {Comments.map(() => (
+          <div key={comment.id}>
+            <Comment {...comment} />
+          </div>
+        ))}
       </div>
     </div>
   );

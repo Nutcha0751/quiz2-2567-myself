@@ -1,11 +1,14 @@
 "use client";
+
+import { CommentProps } from "@/libs/types";
+
 export default function Comment({
   ImagePath,
   username,
   commentTitle,
   likes,
   replies,
-}) {
+}: CommentProps) {
   return (
     <div>
       your code for Comment component here ...
