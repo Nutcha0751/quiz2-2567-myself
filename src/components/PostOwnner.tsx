@@ -6,7 +6,12 @@ import { PostProps } from "@/libs/types";
   return <div>Your code for PostOwner component ...</div>;
 }*/
 
-export default function PostOwnner({}: PostProps) {
+export default function PostOwnner({
+  ImagePath,
+  username,
+  postTitle,
+  likes,
+}: PostProps) {
   return <div>
     <div className="card">
       <div className="card-header">

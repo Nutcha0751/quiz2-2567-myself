@@ -1,6 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+
+import PostOwnner from "@/components/PostOwnner";
+import Comment from "@/components/Comment";
 import { comments } from "@/libs/comments";
+import { CommentProps } from "@/libs/types";
 
 
 export default function Home() {
@@ -83,7 +87,7 @@ export default function Home() {
         </div>
 
         {/* map-loop render Comment component here */}
-
+        {/*{comments.map((Comment:CommentProps) => ())}*/}
       </div>
     </div>
   );
