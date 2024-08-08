@@ -1,6 +1,8 @@
 "use client";
 
 import { CommentProps } from "@/libs/types";
+import { ReplyProps } from "@/libs/types";
+import Reply from "./Reply";
 
 export default function Comment({
   ImagePath,
