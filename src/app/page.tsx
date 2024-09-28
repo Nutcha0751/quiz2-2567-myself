@@ -5,6 +5,7 @@ import PostOwnner from "@/components/PostOwnner";
 import Comment from "@/components/Comment";
 import { comments } from "@/libs/comments";
 import { CommentProps } from "@/libs/types";
+import Reply from "@/components/Reply";
 
 
 export default function Home() {
@@ -87,7 +88,22 @@ export default function Home() {
         </div>
 
         {/* map-loop render Comment component here */}
-        {/*{comments.map((Comment:CommentProps) => ())}*/}
+        {/*{comments.map((comment: CommentProps) => (
+        <Comment key={comment.id} id={comment.id} text={comment.text} />
+        ))}*/}
+
+<div>
+  {comments.map((comment, index) => (
+    <Comment
+      key={index}
+      ImagePath={comment.userImagePath}  // ใช้ 'userImagePath' จากข้อมูลของคุณ
+      username={comment.username}        // ใช้ 'username' จากข้อมูลของคุณ
+      commentTitle={comment.commentText} // ใช้ 'commentText' สำหรับเนื้อหาความคิดเห็น
+      likes={comment.likeNum}            // ใช้ 'likeNum' สำหรับจำนวนไลค์
+      replies={comment.replies}          // ใช้ 'replies' สำหรับการตอบกลับ
+    />
+  ))}
+</div>        
       </div>
     </div>
   );
