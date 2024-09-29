@@ -1,31 +1,36 @@
 "use client";
-
-import { PostProps } from "@/libs/types";
-
-/*export default function PostOwnner({}) {
-  return <div>Your code for PostOwner component ...</div>;
-}*/
-
+interface PostComponent {
+  content:string;
+  profilePic:string;
+  PostTitle:string;
+  likes:number
+}
 export default function PostOwnner({
-  ImagePath,
-  username,
-  postTitle,
+  content,
+  profilePic,
+  PostTitle,
   likes,
-}: PostProps) {
-  return <div>
-    <div className="card">
-      <div className="card-header">
-        <img className="profile-pic" src="profile-pic.jpg" alt="Profile Pic" />
-        <span>{username}</span>
+}:PostComponent) {
+  return (
+    <div className="vstack gap-3">
+      <div className="d-flex align-items-center gap-3">
+        <img
+          src= {profilePic}
+          width="48"
+          height="48"
+          className="rounded-circle"
+          style={{ objectFit: "cover" }}
+        />
+        <span className="fw-semibold fs-5"> {PostTitle } </span>
       </div>
-      <div className="card-body">
-        <img className="post-img" src={ImagePath} alt="Post Image" />
-        <p>{postTitle}</p>
-        <div className="likes-comments">
-          <span>{likes} likes</span>
-          <span>0 comments</span>
-        </div>
+
+      <span>{content}</span>
+
+      <div className="d-flex align-items-center gap-1">
+        <img src="/like.svg" width={20}></img>
+        <span className="text-muted">{likes} คน</span>
       </div>
-  </div>;
-  </div>
+      <hr className="m-0 border" />
+    </div>
+  );
 }
