@@ -3,7 +3,13 @@ import styles from "./page.module.css";
 import { comments } from "@/libs/comments";
 import PostOwnner from "@/components/PostOwnner";
 import Comment from "@/components/Comment";
+<<<<<<< HEAD
 import { ReplyProps } from "../libs/types";
+=======
+import { comments } from "@/libs/comments";
+import { CommentProps } from "@/libs/types";
+import Reply from "@/components/Reply";
+>>>>>>> 7c5a7c9a84f60637813f72676faa5978f710e34a
 
 interface CommentComponent {
   userImagePath: string;
@@ -33,6 +39,7 @@ export default function Home() {
         ></PostOwnner>
 
         {/* map-loop render Comment component here */}
+<<<<<<< HEAD
         {comments.map((cmd: CommentComponent) => (
           <Comment
             key={cmd.username}
@@ -43,6 +50,24 @@ export default function Home() {
             replies={cmd.replies}
           />
         ))}
+=======
+        {/*{comments.map((comment: CommentProps) => (
+        <Comment key={comment.id} id={comment.id} text={comment.text} />
+        ))}*/}
+
+<div>
+  {comments.map((comment, index) => (
+    <Comment
+      key={index}
+      ImagePath={comment.userImagePath}  // ใช้ 'userImagePath' จากข้อมูลของคุณ
+      username={comment.username}        // ใช้ 'username' จากข้อมูลของคุณ
+      commentTitle={comment.commentText} // ใช้ 'commentText' สำหรับเนื้อหาความคิดเห็น
+      likes={comment.likeNum}            // ใช้ 'likeNum' สำหรับจำนวนไลค์
+      replies={comment.replies}          // ใช้ 'replies' สำหรับการตอบกลับ
+    />
+  ))}
+</div>        
+>>>>>>> 7c5a7c9a84f60637813f72676faa5978f710e34a
       </div>
     </div>
   );
