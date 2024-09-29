@@ -28,7 +28,7 @@ export default function Home() {
         <PostOwnner
           PostTitle="Nutcha Khampoung 660610751"
           content="Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #26120"
-          profilePic="/profileImages/nutcha.png"
+          profilePic="/profileImages/nutcha.jpg"
           likes={0}
         ></PostOwnner>
 
