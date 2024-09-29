@@ -27,7 +27,7 @@ export default function PostOwnner({
       <span>{content}</span>
 
       <div className="d-flex align-items-center gap-1">
-        <img src="/like.svg" width={20}></img>
+        <img src="/profileImages/like.svg" width={20}></img>
         <span className="text-muted">{likes} คน</span>
       </div>
       <hr className="m-0 border" />

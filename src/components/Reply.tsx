@@ -19,7 +19,7 @@ export default function Reply({ ImagePath, username, replyTitle, likeNum }:any) 
       <br />
       <span>{replyTitle}</span>
       <div className="d-flex align-items-center gap-1">
-      { likeNum > 0 && <img src="/like.svg" width={20}></img> }
+      { likeNum > 0 && <img src="/profileImages/like.svg" width={20}></img> }
         { likeNum > 0 && <span className="text-muted">{likeNum} คน</span>}
       </div>
     </div>
