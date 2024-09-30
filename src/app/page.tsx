@@ -29,7 +29,7 @@ export default function Home() {
           PostTitle="Nutcha Khampoung 660610751"
           content="Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #26120"
           profilePic="/profileImages/nutcha.jpg"
-          likes={0}
+          likes={100}
         ></PostOwnner>
 
         {/* map-loop render Comment component here */}
